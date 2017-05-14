@@ -1,0 +1,4 @@
+
+# === {{CMD}}  ...
+compile () {
+} # === end function

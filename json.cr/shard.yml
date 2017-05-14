@@ -1,0 +1,13 @@
+name: json
+version: 0.1.0
+
+authors:
+  - da99 <i-hate-spam-1234567@mailinator.com>
+
+targets:
+  json:
+    main: src/json.cr
+
+crystal: 0.22.0
+
+license: MIT
