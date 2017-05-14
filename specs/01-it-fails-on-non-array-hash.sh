@@ -6,8 +6,8 @@ THE_ARGS="$@"
 
 BIN="$1"
 
-local +x EXPECTED="1"
-local +x ACTUAL="$( "$BIN"  '{"a":{"b":{"c":[1,2,3]}}}'  'a.b.c[0]' )"
+local +x EXPECTED="!FAILED"
+local +x ACTUAL="$( "$BIN"  '"a"'  'a.b.c[0]' &>/dev/null || echo "!FAILED")"
 
 if [[ "$EXPECTED" == "$ACTUAL" ]]; then
   sh_color GREEN "=== {{Passed}}: $EXPECTED == $ACTUAL"
