@@ -18,7 +18,7 @@ if ARGV.size != 2
   exit 2
 end
 
-raw = ARGV.first
+raw = ARGV.first.strip
 target = ARGV.last
 
 json = JSON.parse_raw(raw)
