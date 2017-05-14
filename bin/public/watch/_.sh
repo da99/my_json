@@ -1,14 +1,21 @@
 
 # === {{CMD}}
 watch () {
+  cd "$THIS_DIR"
+  local +x CMD="my_json watch run"
+
   if [[ -z "$@" ]]; then
-    mksh_setup watch "-r json.cr"  "my_json watch run"
+    $CMD
+    mksh_setup watch "-r bin -r specs -r json.cr"  "$CMD"
     return 0
   fi
 
   case "$@" in
     run)
+      sh_color ORANGE "=== {{Compiling}}..."
       my_json compile
+      my_json spec
+      echo ""
       ;;
 
     *)
