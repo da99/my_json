@@ -13,8 +13,8 @@ THIS_DIR="$(dirname "$(dirname "$(realpath "$0")")")"
 PATH="$PATH:$THIS_DIR/../mksh_setup/bin"
 PATH="$PATH:$THIS_DIR/../sh_color/bin"
 PATH="$PATH:$THIS_DIR/bin"
-PATH="$PATH:$THIS_DIR/../my_crystal_lang/progs/latest-crystal/bin"
-PATH="$PATH:$THIS_DIR/../my_crystal_lang/progs/latest-shards/bin"
+PATH="$PATH:$THIS_DIR/../my_crystal/progs/latest-crystal/bin"
+PATH="$PATH:$THIS_DIR/../my_crystal/progs/latest-shards/bin"
 
 case $ACTION in
 
